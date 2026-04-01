@@ -18474,3 +18474,437 @@ Watching for file changes with StatReloader
 "POST /api/v1/scoring/score/ HTTP/1.1" 200 15
 "OPTIONS /api/v1/suggestions/suggestions/ HTTP/1.1" 200 0
 "POST /api/v1/suggestions/suggestions/ HTTP/1.1" 200 1291
+Watching for file changes with StatReloader
+"OPTIONS /api/v1/accounts/login/ HTTP/1.1" 200 0
+"POST /api/v1/accounts/login/ HTTP/1.1" 200 563
+"OPTIONS /api/v1/parser/upload/ HTTP/1.1" 200 0
+"POST /api/v1/parser/upload/ HTTP/1.1" 201 650
+"OPTIONS /api/v1/scoring/score/ HTTP/1.1" 200 0
+"POST /api/v1/scoring/score/ HTTP/1.1" 200 15
+"OPTIONS /api/v1/suggestions/suggestions/ HTTP/1.1" 200 0
+Gemini API Error: 403 Your API key was reported as leaked. Please use another API key.
+"POST /api/v1/suggestions/suggestions/ HTTP/1.1" 200 108
+D:\Project_Intership\Mini_Project\backend\core\settings.py changed, reloading.
+Watching for file changes with StatReloader
+Unauthorized: /api/v1/parser/upload/
+"POST /api/v1/parser/upload/ HTTP/1.1" 401 172
+"POST /api/v1/accounts/login/ HTTP/1.1" 200 563
+"POST /api/v1/parser/upload/ HTTP/1.1" 201 650
+"POST /api/v1/scoring/score/ HTTP/1.1" 200 15
+"POST /api/v1/suggestions/suggestions/ HTTP/1.1" 200 981
+"OPTIONS /api/v1/recommender/match/ HTTP/1.1" 200 0
+Bad Request: /api/v1/recommender/match/
+"POST /api/v1/recommender/match/ HTTP/1.1" 400 30
+D:\Project_Intership\Mini_Project\backend\resume_parser\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Project_Intership\Mini_Project\backend\core\settings.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /api/v1/accounts/login/ HTTP/1.1" 200 563
+"POST /api/v1/parser/upload/ HTTP/1.1" 201 3483
+"POST /api/v1/scoring/score/ HTTP/1.1" 200 15
+"POST /api/v1/suggestions/suggestions/ HTTP/1.1" 200 1230
+"POST /api/v1/recommender/match/ HTTP/1.1" 200 47
+"POST /api/v1/recommender/match/ HTTP/1.1" 200 47
+"POST /api/v1/recommender/match/ HTTP/1.1" 200 40
+"POST /api/v1/recommender/match/ HTTP/1.1" 200 40
+"POST /api/v1/recommender/match/ HTTP/1.1" 200 47
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"POST /api/v1/accounts/login/ HTTP/1.1" 200 563
+"POST /api/v1/parser/upload/ HTTP/1.1" 201 3483
+"POST /api/v1/scoring/score/ HTTP/1.1" 200 15
+"POST /api/v1/suggestions/suggestions/ HTTP/1.1" 200 1305
+"OPTIONS /api/v1/ai-jobs/match/ HTTP/1.1" 200 0
+"POST /api/v1/ai-jobs/match/ HTTP/1.1" 200 986
+"POST /api/v1/accounts/login/ HTTP/1.1" 200 563
+"POST /api/v1/parser/upload/ HTTP/1.1" 201 3857
+"POST /api/v1/scoring/score/ HTTP/1.1" 200 15
+"POST /api/v1/suggestions/suggestions/ HTTP/1.1" 200 1014
+"POST /api/v1/ai-jobs/match/ HTTP/1.1" 200 988
+"OPTIONS /api/v1/chatbot/chat/ HTTP/1.1" 200 0
+Service Error: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+Internal Server Error: /api/v1/chatbot/chat/
+"POST /api/v1/chatbot/chat/ HTTP/1.1" 500 198
+"POST /api/v1/ai-jobs/match/ HTTP/1.1" 200 988
+Service Error: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+Internal Server Error: /api/v1/chatbot/chat/
+"POST /api/v1/chatbot/chat/ HTTP/1.1" 500 198
+D:\Project_Intership\Mini_Project\backend\chatbot\services.py changed, reloading.
+D:\Project_Intership\Mini_Project\backend\chatbot\services.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Chatbot Service Error: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+"POST /api/v1/chatbot/chat/ HTTP/1.1" 200 170
+D:\Project_Intership\Mini_Project\backend\chatbot\services.py changed, reloading.
+D:\Project_Intership\Mini_Project\backend\chatbot\services.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Chatbot Service Error: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+"POST /api/v1/chatbot/chat/ HTTP/1.1" 200 170
+D:\Project_Intership\Mini_Project\backend\core\settings.py changed, reloading.
+D:\Project_Intership\Mini_Project\backend\core\settings.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Chatbot Service Error: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+"POST /api/v1/chatbot/chat/ HTTP/1.1" 200 170
+Watching for file changes with StatReloader
+"POST /api/v1/accounts/login/ HTTP/1.1" 200 563
+Chatbot Service Error: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+"POST /api/v1/chatbot/chat/ HTTP/1.1" 200 170
+"POST /api/v1/parser/upload/ HTTP/1.1" 201 3930
+"POST /api/v1/scoring/score/ HTTP/1.1" 200 15
+"POST /api/v1/suggestions/suggestions/ HTTP/1.1" 200 1498
+Chatbot Service Error: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+"POST /api/v1/chatbot/chat/ HTTP/1.1" 200 170
+D:\Project_Intership\Mini_Project\backend\core\settings.py changed, reloading.
+D:\Project_Intership\Mini_Project\backend\core\settings.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"POST /api/v1/accounts/login/ HTTP/1.1" 200 563
+Chatbot Service Error: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+"POST /api/v1/chatbot/chat/ HTTP/1.1" 200 170
+D:\Project_Intership\Mini_Project\backend\chatbot\services.py changed, reloading.
+D:\Project_Intership\Mini_Project\backend\chatbot\services.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"POST /api/v1/accounts/login/ HTTP/1.1" 200 563
+"POST /api/v1/parser/upload/ HTTP/1.1" 201 3930
+"POST /api/v1/scoring/score/ HTTP/1.1" 200 15
+"POST /api/v1/suggestions/suggestions/ HTTP/1.1" 200 886
+"POST /api/v1/chatbot/chat/ HTTP/1.1" 200 931
+"POST /api/v1/chatbot/chat/ HTTP/1.1" 200 1913
+D:\Project_Intership\Mini_Project\backend\chatbot\services.py changed, reloading.
+D:\Project_Intership\Mini_Project\backend\chatbot\services.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Service Error: {'error': ErrorDetail(string='Invalid credentials', code='error')}
+Unauthorized: /api/v1/accounts/login/
+"POST /api/v1/accounts/login/ HTTP/1.1" 401 31
+"POST /api/v1/accounts/login/ HTTP/1.1" 200 563
+"POST /api/v1/parser/upload/ HTTP/1.1" 201 3857
+"POST /api/v1/scoring/score/ HTTP/1.1" 200 15
+"POST /api/v1/suggestions/suggestions/ HTTP/1.1" 200 1133
+"POST /api/v1/ai-jobs/match/ HTTP/1.1" 200 988
+"POST /api/v1/accounts/login/ HTTP/1.1" 200 563
+"POST /api/v1/parser/upload/ HTTP/1.1" 201 3857
+"POST /api/v1/scoring/score/ HTTP/1.1" 200 15
+"POST /api/v1/suggestions/suggestions/ HTTP/1.1" 200 1476
+"POST /api/v1/accounts/login/ HTTP/1.1" 200 563
+"POST /api/v1/chatbot/chat/ HTTP/1.1" 200 485
+"POST /api/v1/parser/upload/ HTTP/1.1" 201 3857
+"POST /api/v1/scoring/score/ HTTP/1.1" 200 15
+"POST /api/v1/suggestions/suggestions/ HTTP/1.1" 200 1291
+"POST /api/v1/chatbot/chat/ HTTP/1.1" 200 966
+"POST /api/v1/chatbot/chat/ HTTP/1.1" 200 1980
+"POST /api/v1/accounts/login/ HTTP/1.1" 200 563
+"POST /api/v1/parser/upload/ HTTP/1.1" 201 2325
+"POST /api/v1/scoring/score/ HTTP/1.1" 200 14
+Gemini API Error: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 18.81171691s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 20
+}
+, retry_delay {
+  seconds: 18
+}
+]
+"POST /api/v1/suggestions/suggestions/ HTTP/1.1" 200 108
+"POST /api/v1/accounts/login/ HTTP/1.1" 200 563
+"POST /api/v1/parser/upload/ HTTP/1.1" 201 3930
+"POST /api/v1/scoring/score/ HTTP/1.1" 200 15
+Gemini API Error: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 19.525064436s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 20
+}
+, retry_delay {
+  seconds: 19
+}
+]
+"POST /api/v1/suggestions/suggestions/ HTTP/1.1" 200 108
+Chatbot Service Error: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 54.603498132s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 20
+}
+, retry_delay {
+  seconds: 54
+}
+]
+"POST /api/v1/chatbot/chat/ HTTP/1.1" 200 170
+Watching for file changes with StatReloader
+"POST /api/v1/accounts/login/ HTTP/1.1" 200 563
+"POST /api/v1/parser/upload/ HTTP/1.1" 201 2325
+"POST /api/v1/scoring/score/ HTTP/1.1" 200 14
+Gemini API Error: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 729.947725ms. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 20
+}
+, retry_delay {
+}
+]
+"POST /api/v1/suggestions/suggestions/ HTTP/1.1" 200 108
+"POST /api/v1/ai-jobs/match/ HTTP/1.1" 200 1039
+Chatbot Service Error: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 41.954398759s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 20
+}
+, retry_delay {
+  seconds: 41
+}
+]
+Watching for file changes with StatReloader
+"POST /api/v1/accounts/login/ HTTP/1.1" 200 563
+"POST /api/v1/parser/upload/ HTTP/1.1" 201 3857
+"POST /api/v1/scoring/score/ HTTP/1.1" 200 15
+Gemini API Error: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 9.074730471s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 20
+}
+, retry_delay {
+  seconds: 9
+}
+]
+"POST /api/v1/suggestions/suggestions/ HTTP/1.1" 200 108
+"POST /api/v1/ai-jobs/match/ HTTP/1.1" 200 988
+Chatbot Service Error: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 44.877406468s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 20
+}
+, retry_delay {
+  seconds: 44
+}
+]
+"POST /api/v1/chatbot/chat/ HTTP/1.1" 200 170
+"POST /api/v1/accounts/login/ HTTP/1.1" 200 563
+"POST /api/v1/parser/upload/ HTTP/1.1" 201 2325
+"POST /api/v1/scoring/score/ HTTP/1.1" 200 14
+Gemini API Error: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 31.99540516s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 20
+}
+, retry_delay {
+  seconds: 31
+}
+]
+"POST /api/v1/suggestions/suggestions/ HTTP/1.1" 200 108
+"POST /api/v1/ai-jobs/match/ HTTP/1.1" 200 1039
+D:\Project_Intership\Mini_Project\backend\core\settings.py changed, reloading.
+D:\Project_Intership\Mini_Project\backend\core\settings.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"POST /api/v1/accounts/login/ HTTP/1.1" 200 563
+"POST /api/v1/parser/upload/ HTTP/1.1" 201 2325
+"POST /api/v1/scoring/score/ HTTP/1.1" 200 14
+Gemini API Error: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 25.991777888s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 20
+}
+, retry_delay {
+  seconds: 25
+}
+]
+"POST /api/v1/suggestions/suggestions/ HTTP/1.1" 200 108
+Chatbot Service Error: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 10.448598117s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 20
+}
+, retry_delay {
+  seconds: 10
+}
+]
+"POST /api/v1/chatbot/chat/ HTTP/1.1" 200 170
+D:\Project_Intership\Mini_Project\backend\chatbot\services.py changed, reloading.
+D:\Project_Intership\Mini_Project\backend\chatbot\services.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"POST /api/v1/accounts/login/ HTTP/1.1" 200 563
+"POST /api/v1/parser/upload/ HTTP/1.1" 201 2325
+"POST /api/v1/scoring/score/ HTTP/1.1" 200 14
+"POST /api/v1/suggestions/suggestions/ HTTP/1.1" 200 1068
+"POST /api/v1/ai-jobs/match/ HTTP/1.1" 200 1039
+"POST /api/v1/chatbot/chat/ HTTP/1.1" 200 1963
+"POST /api/v1/ai-jobs/match/ HTTP/1.1" 200 1039
+D:\Project_Intership\Mini_Project\backend\job_ai_matcher\services.py changed, reloading.
+D:\Project_Intership\Mini_Project\backend\job_ai_matcher\services.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"POST /api/v1/accounts/login/ HTTP/1.1" 200 563
+"POST /api/v1/parser/upload/ HTTP/1.1" 201 2325
+"POST /api/v1/scoring/score/ HTTP/1.1" 200 14
+"POST /api/v1/suggestions/suggestions/ HTTP/1.1" 200 1447
+"POST /api/v1/ai-jobs/match/ HTTP/1.1" 200 2802
+"POST /api/v1/chatbot/chat/ HTTP/1.1" 200 2040
+"POST /api/v1/chatbot/chat/ HTTP/1.1" 200 1182
+"POST /api/v1/chatbot/chat/ HTTP/1.1" 200 1886
+"POST /api/v1/chatbot/chat/ HTTP/1.1" 200 1631
+"POST /api/v1/chatbot/chat/ HTTP/1.1" 200 2501
+Watching for file changes with StatReloader
+"OPTIONS /api/v1/accounts/login/ HTTP/1.1" 200 0
+"POST /api/v1/accounts/login/ HTTP/1.1" 200 563
+"OPTIONS /api/v1/parser/upload/ HTTP/1.1" 200 0
+"POST /api/v1/parser/upload/ HTTP/1.1" 201 2325
+"OPTIONS /api/v1/scoring/score/ HTTP/1.1" 200 0
+"POST /api/v1/scoring/score/ HTTP/1.1" 200 14
+"OPTIONS /api/v1/suggestions/suggestions/ HTTP/1.1" 200 0
+"POST /api/v1/suggestions/suggestions/ HTTP/1.1" 200 1238
+"OPTIONS /api/v1/ai-jobs/match/ HTTP/1.1" 200 0
+"POST /api/v1/ai-jobs/match/ HTTP/1.1" 200 2460
+"OPTIONS /api/v1/chatbot/chat/ HTTP/1.1" 200 0
+"POST /api/v1/chatbot/chat/ HTTP/1.1" 200 2070
+Watching for file changes with StatReloader
+"POST /api/v1/accounts/login/ HTTP/1.1" 200 563
+"POST /api/v1/parser/upload/ HTTP/1.1" 201 3857
+"POST /api/v1/scoring/score/ HTTP/1.1" 200 15
+"POST /api/v1/suggestions/suggestions/ HTTP/1.1" 200 1184
+"POST /api/v1/ai-jobs/match/ HTTP/1.1" 200 2466
+"POST /api/v1/chatbot/chat/ HTTP/1.1" 200 1760
+"POST /api/v1/ai-jobs/match/ HTTP/1.1" 200 2118

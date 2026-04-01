@@ -15,7 +15,7 @@ class AISuggestionsService(BaseService):
         self.api_key = getattr(settings, 'OPENAI_API_KEY', getattr(settings, 'GEMINI_API_KEY', None))
         if self.api_key and self.api_key != 'dummy_key':
             genai.configure(api_key=self.api_key)
-            self.model = genai.GenerativeModel('gemini-2.5-flash')
+            self.model = genai.GenerativeModel('gemini-2.5-flash-lite')
         else:
             self.model = None
 

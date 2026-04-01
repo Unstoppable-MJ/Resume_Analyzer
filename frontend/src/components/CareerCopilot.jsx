@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { Send, User, Bot, Loader2, Sparkles } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import ReactMarkdown from 'react-markdown';
 
 const CareerCopilot = ({ activeResume }) => {
     const [messages, setMessages] = useState([
@@ -59,7 +60,23 @@ const CareerCopilot = ({ activeResume }) => {
                                         {msg.role === 'user' ? <User size={20} /> : <Bot size={20} />}
                                     </div>
                                     <div className={`p-4 rounded-2xl ${msg.role === 'user' ? 'bg-indigo-600/40 border border-indigo-500/30' : 'bg-white/5 border border-white/10'}`}>
-                                        <p className="text-sm leading-relaxed">{msg.text}</p>
+                                        {msg.role === 'user' ? (
+                                            <p className="text-sm leading-relaxed whitespace-pre-wrap">{msg.text}</p>
+                                        ) : (
+                                            <div className="text-sm leading-relaxed">
+                                                <ReactMarkdown
+                                                    components={{
+                                                        ul: ({ node, ...props }) => <ul className="list-disc ml-4 mt-2 mb-4 space-y-2" {...props} />,
+                                                        ol: ({ node, ...props }) => <ol className="list-decimal ml-4 mt-2 mb-4 space-y-2" {...props} />,
+                                                        li: ({ node, ...props }) => <li className="pl-1" {...props} />,
+                                                        p: ({ node, ...props }) => <p className="mb-4 last:mb-0" {...props} />,
+                                                        strong: ({ node, ...props }) => <strong className="font-semibold text-indigo-300" {...props} />
+                                                    }}
+                                                >
+                                                    {msg.text}
+                                                </ReactMarkdown>
+                                            </div>
+                                        )}
                                     </div>
                                 </div>
                             </motion.div>

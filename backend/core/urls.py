@@ -42,6 +42,7 @@ urlpatterns = [
     path('api/v1/ats/', include('ats_checker.urls')),
     path('api/v1/suggestions/', include('ai_suggestions.urls')),
     path('api/v1/chatbot/', include('chatbot.urls')),
+    path('api/v1/ai-jobs/', include('job_ai_matcher.urls')),
     
     # Swagger
     path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),

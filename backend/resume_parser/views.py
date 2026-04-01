@@ -47,6 +47,7 @@ class ResumeUploadView(APIView):
                 "message": "Resume uploaded and processed successfully",
                 "resume_id": resume.id,
                 "skills": skills,
+                "extracted_text": text,
                 "preview_text": text[:500] + "..." if len(text) > 500 else text
             }, status=status.HTTP_201_CREATED)
             
