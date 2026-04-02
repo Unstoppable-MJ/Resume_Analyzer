@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ResponsiveContainer, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Radar, Tooltip } from 'recharts';
 import ReactMarkdown from 'react-markdown';
+import AICareerMatchJobs from './AICareerMatchJobs';
 
 const ResumeAnalysis = ({ data }) => {
     if (!data) return null;
@@ -104,6 +105,12 @@ const ResumeAnalysis = ({ data }) => {
                     ))}
                 </div>
             </div>
+
+            {/* AI Career Live Match Integration */}
+            <AICareerMatchJobs
+                skills={data.skills || []}
+                resumeText={data.resume_text || data.raw_text || ''}
+            />
         </div>
     );
 };

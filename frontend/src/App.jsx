@@ -8,6 +8,7 @@ import ResumeUpload from './components/ResumeUpload';
 import CareerCopilot from './components/CareerCopilot';
 import JobMatching from './components/JobMatching';
 import VersionHistory from './components/VersionHistory';
+import LandingPage from './pages/LandingPage';
 
 function App() {
   const [user, setUser] = useState(null);
@@ -20,7 +21,7 @@ function App() {
 
         <main className="flex-grow container mx-auto px-4 py-8 relative z-10">
           <Routes>
-            <Route path="/" element={<Dashboard activeResume={activeResume} />} />
+            <Route path="/" element={user ? <Dashboard activeResume={activeResume} /> : <LandingPage />} />
             <Route path="/login" element={<Login setUser={setUser} />} />
             <Route path="/register" element={<Register />} />
             <Route path="/upload" element={<ResumeUpload setActiveResume={setActiveResume} />} />

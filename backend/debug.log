@@ -19974,3 +19974,24 @@ AIService: Trying provider Groq
 "POST /api/v1/chatbot/chat/ HTTP/1.1" 200 1391
 AIService: Trying provider Groq
 "POST /api/v1/chatbot/chat/ HTTP/1.1" 200 1242
+Watching for file changes with StatReloader
+"OPTIONS /api/v1/accounts/login/ HTTP/1.1" 200 0
+"POST /api/v1/accounts/login/ HTTP/1.1" 200 563
+"OPTIONS /api/v1/chatbot/chat/ HTTP/1.1" 200 0
+AIService: Trying provider Gemini
+Gemini Provider: QUOTA EXHAUSTED. 5 min cooldown.
+AIService: Provider Gemini failed with rate_limit
+AIService: Trying provider Groq
+"POST /api/v1/chatbot/chat/ HTTP/1.1" 200 801
+"OPTIONS /api/v1/parser/upload/ HTTP/1.1" 200 0
+"POST /api/v1/parser/upload/ HTTP/1.1" 201 3429
+"OPTIONS /api/v1/scoring/score/ HTTP/1.1" 200 0
+"POST /api/v1/scoring/score/ HTTP/1.1" 200 15
+"OPTIONS /api/v1/suggestions/suggestions/ HTTP/1.1" 200 0
+AIService: Trying provider Groq
+"POST /api/v1/suggestions/suggestions/ HTTP/1.1" 200 919
+"OPTIONS /api/v1/ai-jobs/live/ HTTP/1.1" 200 0
+"POST /api/v1/ai-jobs/live/ HTTP/1.1" 200 2241
+"OPTIONS /api/v1/ai-jobs/match/ HTTP/1.1" 200 0
+AIService: Trying provider Groq
+"POST /api/v1/ai-jobs/match/ HTTP/1.1" 200 1624
