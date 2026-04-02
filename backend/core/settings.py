@@ -1,6 +1,10 @@
 import os
 from pathlib import Path
 from datetime import timedelta
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -10,7 +14,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/6.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-$anuhb%f95xrdaop2l*t7f=@=ir8)nc=*wb=n_um&ja4juy)&7'
+SECRET_KEY = os.getenv('SECRET_KEY', 'django-insecure-fallback-key-for-dev-only')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -126,7 +130,23 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-OPENAI_API_KEY ="AIzaSyAebcPxpgQ1-rb4hJWPetoCCpqJ0kNw2kE"
+
+# AI API Keys
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+GEMINI_MODEL_NAME = "gemini-2.0-flash"
+GEMINI_MOCK_MODE = False
+
+# Groq Configuration
+GROK_API_KEY = os.getenv("GROK_API_KEY")
+GROQ_MODEL_NAME = "llama-3.3-70b-versatile"
+
+# HuggingFace Configuration
+HF_API_KEY = os.getenv("HF_API_KEY")
+HF_MODEL_NAME = "mistralai/Mistral-7B-Instruct-v0.3"
+AI_PROVIDER_ORDER = ['gemini', 'groq', 'huggingface']
+AI_DAILY_RATE_LIMIT = 50
+  # Disabled as requested for realistic AI experience
 # Default primary key field type
 # https://docs.djangoproject.com/en/6.0/ref/settings/#default-auto-field
 

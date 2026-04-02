@@ -1,29 +1,18 @@
-import google.generativeai as genai
-from django.conf import settings
 from core.common import BaseService
+from core.ai_service import AIService
 
 class ChatbotService(BaseService):
-    """Service for Career Copilot Chatbot using Gemini."""
+    """Service for Career Copilot Chatbot using multi-provider AI failover."""
 
     def __init__(self):
         super().__init__()
-        self.api_key = getattr(settings, 'OPENAI_API_KEY', getattr(settings, 'GEMINI_API_KEY', None))
-        if self.api_key and self.api_key != 'dummy_key':
-            genai.configure(api_key=self.api_key)
-            self.model = genai.GenerativeModel('gemini-2.5-flash-lite')
-        else:
-            self.model = None
+        self.ai = AIService()
 
-    def get_response(self, user_query, resume_context=""):
-        """Generate response based on query and optional resume context."""
-        try:
-            if not self.model:
-                return f"I'm here to help with your career! You asked: {user_query}"
-            
-            prompt = f"You are a Career Copilot. Context: {resume_context}\n\nUser Question: {user_query}\n\nPlease provide a helpful and concise response. IMPORTANT FORMATTING RULES: ALWAYS structure your reply using paragraphs with clear line breaks. Use bullet points for lists. Bold the important words and key terms. Use relevant emojis naturally throughout the text for better readability and engagement."
-            response = self.model.generate_content(prompt)
-            
-            return response.text
-        except Exception as e:
-            self.logger.error(f"Chatbot Service Error: {str(e)}")
-            return "Sorry, I'm experiencing technical difficulties right now (API or connection error). Please ensure the backend is correctly configured with a valid API key."
+    def get_response(self, user_query, resume_context="", user_id=None):
+        """Generate response based on query and optional resume context via AIService."""
+        prompt = f"You are a Career Copilot. Context: {resume_context}\n\nUser Question: {user_query}\n\nPlease provide a helpful and concise response. IMPORTANT FORMATTING RULES: ALWAYS structure your reply using paragraphs with clear line breaks. Use bullet points for lists. Bold the important words and key terms. Use relevant emojis naturally throughout the text for better readability and engagement."
+        
+        fallback = "Career Copilot is currently experiencing high demand. I'll be back shortly to help you with your career journey!"
+        
+        ai_data = self.ai.generate_response(prompt, user_id=user_id)
+        return ai_data.get('response', fallback)

@@ -1,33 +1,85 @@
-models/gemini-2.5-flash
-models/gemini-2.5-pro
-models/gemini-2.0-flash
-models/gemini-2.0-flash-001
-models/gemini-2.0-flash-lite-001
-models/gemini-2.0-flash-lite
-models/gemini-2.5-flash-preview-tts
-models/gemini-2.5-pro-preview-tts
-models/gemma-3-1b-it
-models/gemma-3-4b-it
-models/gemma-3-12b-it
-models/gemma-3-27b-it
-models/gemma-3n-e4b-it
-models/gemma-3n-e2b-it
-models/gemini-flash-latest
-models/gemini-flash-lite-latest
-models/gemini-pro-latest
-models/gemini-2.5-flash-lite
-models/gemini-2.5-flash-image
-models/gemini-2.5-flash-lite-preview-09-2025
-models/gemini-3-pro-preview
-models/gemini-3-flash-preview
-models/gemini-3.1-pro-preview
-models/gemini-3.1-pro-preview-customtools
-models/gemini-3.1-flash-lite-preview
-models/gemini-3-pro-image-preview
-models/nano-banana-pro-preview
-models/gemini-3.1-flash-image-preview
-models/lyria-3-clip-preview
-models/lyria-3-pro-preview
-models/gemini-robotics-er-1.5-preview
-models/gemini-2.5-computer-use-preview-10-2025
-models/deep-research-pro-preview-12-2025
+Traceback (most recent call last):
+  File "C:\Users\Ganeshjoshi\AppData\Local\Programs\Python\Python313\Lib\site-packages\google\api_core\grpc_helpers.py", line 55, in error_remapped_callable
+    return callable_(*args, **kwargs)
+  File "C:\Users\Ganeshjoshi\AppData\Local\Programs\Python\Python313\Lib\site-packages\grpc\_interceptor.py", line 276, in __call__
+    response, ignored_call = self._with_call(
+                             ~~~~~~~~~~~~~~~^
+        request,
+        ^^^^^^^^
+    ...<4 lines>...
+        compression=compression,
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Ganeshjoshi\AppData\Local\Programs\Python\Python313\Lib\site-packages\grpc\_interceptor.py", line 331, in _with_call
+    return call.result(), call
+           ~~~~~~~~~~~^^
+  File "C:\Users\Ganeshjoshi\AppData\Local\Programs\Python\Python313\Lib\site-packages\grpc\_channel.py", line 438, in result
+    raise self
+  File "C:\Users\Ganeshjoshi\AppData\Local\Programs\Python\Python313\Lib\site-packages\grpc\_interceptor.py", line 314, in continuation
+    response, call = self._thunk(new_method).with_call(
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        request,
+        ^^^^^^^^
+    ...<4 lines>...
+        compression=new_compression,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Ganeshjoshi\AppData\Local\Programs\Python\Python313\Lib\site-packages\grpc\_channel.py", line 1173, in with_call
+    return _end_unary_response_blocking(state, call, True, None)
+  File "C:\Users\Ganeshjoshi\AppData\Local\Programs\Python\Python313\Lib\site-packages\grpc\_channel.py", line 990, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INVALID_ARGUMENT
+	details = "API key expired. Please renew the API key."
+	debug_error_string = "UNKNOWN:Error received from peer ipv4:216.239.34.223:443 {grpc_message:"API key expired. Please renew the API key.", grpc_status:3}"
+>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Project_Intership\Mini_Project\backend\list_models.py", line 8, in <module>
+    for m in genai.list_models():
+             ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Ganeshjoshi\AppData\Local\Programs\Python\Python313\Lib\site-packages\google\generativeai\models.py", line 204, in list_models
+    for model in client.list_models(page_size=page_size, **request_options):
+                 ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ganeshjoshi\AppData\Local\Programs\Python\Python313\Lib\site-packages\google\ai\generativelanguage_v1beta\services\model_service\client.py", line 923, in list_models
+    response = rpc(
+        request,
+    ...<2 lines>...
+        metadata=metadata,
+    )
+  File "C:\Users\Ganeshjoshi\AppData\Local\Programs\Python\Python313\Lib\site-packages\google\api_core\gapic_v1\method.py", line 128, in __call__
+    return wrapped_func(*args, **kwargs)
+  File "C:\Users\Ganeshjoshi\AppData\Local\Programs\Python\Python313\Lib\site-packages\google\api_core\retry\retry_unary.py", line 294, in retry_wrapped_func
+    return retry_target(
+        target,
+    ...<3 lines>...
+        on_error=on_error,
+    )
+  File "C:\Users\Ganeshjoshi\AppData\Local\Programs\Python\Python313\Lib\site-packages\google\api_core\retry\retry_unary.py", line 156, in retry_target
+    next_sleep = _retry_error_helper(
+        exc,
+    ...<6 lines>...
+        timeout,
+    )
+  File "C:\Users\Ganeshjoshi\AppData\Local\Programs\Python\Python313\Lib\site-packages\google\api_core\retry\retry_base.py", line 216, in _retry_error_helper
+    raise final_exc from source_exc
+  File "C:\Users\Ganeshjoshi\AppData\Local\Programs\Python\Python313\Lib\site-packages\google\api_core\retry\retry_unary.py", line 147, in retry_target
+    result = target()
+  File "C:\Users\Ganeshjoshi\AppData\Local\Programs\Python\Python313\Lib\site-packages\google\api_core\timeout.py", line 130, in func_with_timeout
+    return func(*args, **kwargs)
+  File "C:\Users\Ganeshjoshi\AppData\Local\Programs\Python\Python313\Lib\site-packages\google\api_core\grpc_helpers.py", line 57, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.InvalidArgument: 400 API key expired. Please renew the API key. [reason: "API_KEY_INVALID"
+domain: "googleapis.com"
+metadata {
+  key: "service"
+  value: "generativelanguage.googleapis.com"
+}
+, locale: "en-US"
+message: "API key expired. Please renew the API key."
+]
