@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import axios from 'axios';
+import api from '../utils/api';
 import { useNavigate, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
@@ -13,7 +13,7 @@ const Login = ({ setUser }) => {
         e.preventDefault();
         setLoading(true);
         try {
-            const res = await axios.post('http://localhost:8000/api/v1/accounts/login/', formData);
+            const res = await api.post('accounts/login/', formData);
             localStorage.setItem('token', res.data.tokens.access);
             setUser(res.data.user);
             navigate('/');

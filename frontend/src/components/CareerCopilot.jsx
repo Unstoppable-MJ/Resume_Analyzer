@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import axios from 'axios';
+import api from '../utils/api';
 import { Send, User, Bot, Loader2, Sparkles } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import ReactMarkdown from 'react-markdown';
@@ -22,11 +22,9 @@ const CareerCopilot = ({ activeResume }) => {
         const token = localStorage.getItem('token');
 
         try {
-            const res = await axios.post('http://localhost:8000/api/v1/chatbot/chat/', {
+            const res = await api.post('chatbot/chat/', {
                 query: input,
                 context: activeResume?.extracted_text || ''
-            }, {
-                headers: { 'Authorization': `Bearer ${token}` }
             });
 
             setMessages(prev => [...prev, { role: 'bot', text: res.data.response }]);

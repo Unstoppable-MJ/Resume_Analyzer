@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import axios from 'axios';
+import api from '../utils/api';
 import { useNavigate, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
@@ -13,7 +13,7 @@ const Register = () => {
         e.preventDefault();
         setLoading(true);
         try {
-            await axios.post('http://localhost:8000/api/v1/accounts/register/', formData);
+            await api.post('accounts/register/', formData);
             navigate('/login');
         } catch (err) {
             setError(err.response?.data?.error || 'Registration failed.');

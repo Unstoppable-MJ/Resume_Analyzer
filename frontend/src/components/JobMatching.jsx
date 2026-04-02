@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import axios from 'axios';
+import api from '../utils/api';
 import { Target, Search, CheckCircle, AlertTriangle, Briefcase, Zap, AlertCircle } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -15,10 +15,8 @@ const JobMatching = ({ activeResume }) => {
 
         const token = localStorage.getItem('token');
         try {
-            const res = await axios.post('http://localhost:8000/api/v1/ai-jobs/match/', {
+            const res = await api.post('ai-jobs/match/', {
                 resume_text: activeResume.extracted_text
-            }, {
-                headers: { 'Authorization': `Bearer ${token}` }
             });
             setJobs(res.data.recommended_jobs || []);
         } catch (err) {

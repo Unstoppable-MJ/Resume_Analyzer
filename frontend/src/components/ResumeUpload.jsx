@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from 'react';
 import { useDropzone } from 'react-dropzone';
 import { Upload, FileText, CheckCircle, Loader2, XCircle } from 'lucide-react';
-import axios from 'axios';
+import api from '../utils/api';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const ResumeUpload = ({ setActiveResume }) => {
@@ -37,22 +37,19 @@ const ResumeUpload = ({ setActiveResume }) => {
         formData.append('file', fileObj);
 
         try {
-            const res = await axios.post('http://localhost:8000/api/v1/parser/upload/', formData, {
+            const res = await api.post('parser/upload/', formData, {
                 headers: {
-                    'Content-Type': 'multipart/form-data',
-                    'Authorization': `Bearer ${token}`
+                    'Content-Type': 'multipart/form-data'
                 }
             });
 
             // Get additional analysis
-            const analysisRes = await axios.post('http://localhost:8000/api/v1/scoring/score/',
-                { text: res.data.preview_text },
-                { headers: { 'Authorization': `Bearer ${token}` } }
+            const analysisRes = await api.post('scoring/score/',
+                { text: res.data.preview_text }
             );
 
-            const aiRes = await axios.post('http://localhost:8000/api/v1/suggestions/suggestions/',
-                { text: res.data.preview_text },
-                { headers: { 'Authorization': `Bearer ${token}` } }
+            const aiRes = await api.post('suggestions/suggestions/',
+                { text: res.data.preview_text }
             ).catch(e => {
                 console.warn("AI Suggestions failed:", e);
                 return { data: { suggestions: ["AI suggestions are currently unavailable. Please check your backend API configuration."] } };

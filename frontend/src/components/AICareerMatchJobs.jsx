@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Briefcase, MapPin, Building, Target, Loader2, ExternalLink } from 'lucide-react';
-import axios from 'axios';
+import api from '../utils/api';
 
 const AICareerMatchJobs = ({ skills = [], resumeText = '' }) => {
     const [jobs, setJobs] = useState([]);
@@ -19,14 +19,9 @@ const AICareerMatchJobs = ({ skills = [], resumeText = '' }) => {
             // Provide skills as fake resume_text if real text isn't passed down
             const fallbackText = resumeText.length > 50 ? resumeText : skills.join(' ');
 
-            const response = await axios.post(
-                'http://localhost:8000/api/v1/ai-jobs/live/',
-                { resume_text: fallbackText, skills: skills },
-                {
-                    headers: {
-                        Authorization: `Bearer ${localStorage.getItem('token')}`
-                    }
-                }
+            const response = await api.post(
+                'ai-jobs/live/',
+                { resume_text: fallbackText, skills: skills }
             );
 
             setJobs(response.data.jobs || []);
