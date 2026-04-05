@@ -1,0 +1,46 @@
+name: Deploy to Azure VM
+
+on:
+  push:
+    branches: [ main, master ]
+  workflow_run:
+    workflows: ["Frontend CI", "Backend CI"]
+    types:
+      - completed
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' || github.event_name == 'push' }}
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Deploy to Server via SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.VM_HOST }}
+          username: ${{ secrets.VM_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            cd ~/Resume_Analyzer # Change to your project directory on the VM
+            git pull origin main
+
+            # 1. Backend Update
+            cd backend
+            source venv/bin/activate # Assuming you have a virtualenv named 'venv'
+            pip install -r requirements.txt
+            python manage.py migrate
+            python manage.py collectstatic --no-input
+            sudo systemctl restart resume_analyzer_backend # Change to your backend service name
+
+            # 2. Frontend Update
+            cd ../frontend
+            npm install
+            npm run build
+            # If you are using Nginx to serve the 'dist' folder directly, no further action needed.
+            # Otherwise, copy to nginx root:
+            # sudo cp -r dist/* /var/www/html/
+            
+            echo "Deployment to Azure VM completed successfully!"

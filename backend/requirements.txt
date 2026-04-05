@@ -1,0 +1,17 @@
+django>=6.0
+djangorestframework
+django-cors-headers
+drf-yasg
+djangorestframework-simplejwt
+python-dotenv
+google-generativeai
+openai
+groq
+huggingface_hub
+pdfminer.six
+python-docx
+spacy
+scikit-learn
+requests
+numpy
+pandas

@@ -1,0 +1,129 @@
+# Project: AI Resume Analyzer & Career Copilot
+
+## 1. Tech Stack
+### Frontend:
+- **Framework**: React 19 (via Vite)
+- **Styling**: Tailwind CSS 3.4
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
+- **API Communication**: Axios
+- **Routing**: React Router DOM 7
+- **Data Visualization**: Recharts (for scoring display)
+- **Utilities**: React Dropzone (file uploads), React Markdown (AI formatting)
+
+### Backend:
+- **Framework**: Django 6.0
+- **API**: Django REST Framework (DRF)
+- **Language**: Python
+- **Database**: SQLite (Development)
+- **Machine Learning**: Scikit-Learn (RandomForest for Scoring)
+- **AI Integration**: Google Gemini API (Primary), Groq & HuggingFace (Fallbacks)
+- **Documentation**: Swagger/OpenAPI (drf-yasg)
+
+---
+
+## 2. Features and Features Implementations
+### A. Resume Parsing & Validation
+- **Implementation**: The `resume_parser` app handles file uploads. It utilizes a `ResumeValidatorService` to detect if the uploaded file is actually a resume using NLP/Keyword analysis.
+- **Frontend**: `ResumeUpload.jsx` uses `react-dropzone` for drag-and-drop and `framer-motion` for smooth state transitions.
+
+### B. ATS Scoring (ML-based)
+- **Implementation**: `resume_scoring` uses a `RandomForestRegressor` model trained on TF-IDF vectorized text. It provides a numeric score (0-100) based on content density and relevance.
+- **Service**: `ResumeScoringService` in `services.py`.
+
+### C. AI Suggestions
+- **Implementation**: `ai_suggestions` app sends extracted resume text to the Gemini API with a specific prompt to identify weaknesses and provide actionable tips.
+- **Safety**: Includes a multi-provider fallback system (Gemini -> Groq -> HuggingFace) to handle rate limits (429 errors).
+
+### D. Career Copilot (Chatbot)
+- **Implementation**: An interactive chat interface where users can ask career-related questions. The `chatbot` app maintains context and uses LLMs to provide professional advice.
+
+### E. AI Career Matchmaker
+- **Implementation**: Matches the user's resume against job descriptions using cosine similarity or LLM-based ranking to suggest the best career paths.
+
+---
+
+## 3. Important Files and Their Code
+
+### [Backend] core/ai_providers.py (AI Integration Logic)
+```python
+class GeminiProvider(BaseAIProvider):
+    def generate_response(self, prompt):
+        if not self.model or self.in_cooldown:
+            return None, "unavailable"
+        try:
+            response = self.model.generate_content(prompt)
+            self._reset_cooldown()
+            return self._format_response(response.text), None
+        except Exception as e:
+            # Handle rate limiting (429) and auth errors
+            ...
+```
+
+### [Backend] resume_scoring/services.py (Machine Learning Scoring)
+```python
+class ResumeScoringService(BaseService):
+    def calculate_score(self, text):
+        try:
+            X = self.vectorizer.transform([text])
+            score = self.model.predict(X)[0]
+            return round(float(score), 2)
+        except Exception as e:
+            ...
+```
+
+### [Frontend] src/App.jsx (Routing & Entry)
+```javascript
+function App() {
+  return (
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Dashboard />} />
+        <Route path="/upload" element={<ResumeUpload />} />
+        <Route path="/copilot" element={<CareerCopilot />} />
+        <Route path="/jobs" element={<JobMatching />} />
+      </Routes>
+    </Router>
+  );
+}
+```
+
+### [Frontend] src/components/ResumeUpload.jsx (Main Feature Interaction)
+```javascript
+const handleUpload = async (fileObj) => {
+    const formData = new FormData();
+    formData.append('file', fileObj);
+    try {
+        const res = await api.post('parser/upload/', formData);
+        const analysisRes = await api.post('scoring/score/', { text: res.data.preview_text });
+        setActiveResume({ ...res.data, ats_score: `${analysisRes.data.score}%` });
+    } catch (err) { ... }
+};
+```
+
+---
+
+## 4. Workflow
+1. **User Authentication**: Login/Register via the `accounts` app.
+2. **Resume Submission**: User uploads a PDF/DOCX resume.
+3. **Analysis Pipeline**:
+   - **Validation**: System checks if the file is a resume.
+   - **Parsing**: Text is extracted.
+   - **Scoring**: ML model calculates an ATS score.
+   - **Suggestions**: AI generates improvement tips.
+4. **Interaction**: User explores the dashboard, reviews suggestions, and uses the Career Copilot for specific queries.
+5. **Job Discovery**: System recommends jobs matching the parsed profile.
+
+---
+
+## 5. Full Explanation
+This project is a comprehensive **AI-Powered Career Suite** designed to bridge the gap between job seekers and Applicant Tracking Systems (ATS). 
+
+The system leverages a **Hybrid AI Approach**:
+- **Classical ML** (Scikit-Learn) is used for deterministic tasks like scoring, ensuring speed and consistency.
+- **Generative AI** (Google Gemini) is used for creative and contextual tasks like providing resume suggestions and powering the Career Copilot.
+
+The **Frontend** is built for a "Premium SaaS" feel, using glassmorphism effects and smooth animations (Framer Motion) to make the complex analysis process feel interactive and user-friendly.
+
+The **Backend** is highly modular, with a centralized `ai_service` that handles provider switching and rate-limiting. This makes the system resilient to external API failures or quota limits. Data is persisted in SQLite, and the API is fully documented via Swagger, making it easy to integrate or extend in the future.
