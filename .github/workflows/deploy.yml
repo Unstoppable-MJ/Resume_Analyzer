@@ -39,8 +39,7 @@ jobs:
             cd ../frontend
             npm install
             npm run build
-            # If you are using Nginx to serve the 'dist' folder directly, no further action needed.
-            # Otherwise, copy to nginx root:
-            # sudo cp -r dist/* /var/www/html/
+            # Copy to nginx root to serve the latest build:
+            sudo cp -r dist/* /var/www/html/
             
             echo "Deployment to Azure VM completed successfully!"
