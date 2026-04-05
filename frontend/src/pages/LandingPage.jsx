@@ -9,9 +9,7 @@ import {
     MessageSquare,
     ArrowRight,
     CheckCircle2,
-    Users,
     Zap,
-    Target,
     BarChart3
 } from 'lucide-react';
 import { Link } from 'react-router-dom';

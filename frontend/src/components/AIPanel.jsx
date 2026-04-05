@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { Sparkles, TrendingUp, ShieldCheck } from 'lucide-react';
 
 const AIPanel = ({ activeResume }) => {
