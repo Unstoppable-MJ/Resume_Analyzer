@@ -8,10 +8,50 @@ This project is a premium, SaaS-style web application designed to help job seeke
 
 ## 📸 Project Showcase
 
-> [!TIP]
-> **ADD SCREENSHOT HERE**: Replace this with a high-resolution hero image of your landing page. 
-> Recommended size: 1200x600px.
-> `![Hero Screenshot](./screenshots/hero.png)`
+ ## Landing Page
+ 
+ <img width="1919" height="1030" alt="image" src="https://github.com/user-attachments/assets/1009ded7-0c66-4116-88f6-10a66754dd0c" />
+ <img width="1917" height="1031" alt="image" src="https://github.com/user-attachments/assets/3facb661-0a64-4934-a9e0-1c82d7366819" />
+ <img width="1914" height="982" alt="image" src="https://github.com/user-attachments/assets/35d2a326-af48-4ab8-b41b-f71c710bc4c1" />
+
+ ## Login Page
+
+ <img width="1919" height="1028" alt="image" src="https://github.com/user-attachments/assets/b74b21be-ee91-42c7-bae1-756f93a64e73" />
+ <img width="1919" height="940" alt="image" src="https://github.com/user-attachments/assets/c6d3c3e6-80dc-4da3-9545-41b44d22b38f" />
+
+ ## Analysis of Resume 
+
+ <img width="1919" height="972" alt="image" src="https://github.com/user-attachments/assets/76bb307d-fda5-440e-8f47-1de90f7e1311" />
+
+ ## Skill Mapped and AI Suggestions
+ 
+ <img width="1885" height="782" alt="image" src="https://github.com/user-attachments/assets/38ec3eb5-c660-4e67-905a-14e1e8991a42" />
+
+ ## Ai Job matches
+
+ <img width="1897" height="817" alt="image" src="https://github.com/user-attachments/assets/6cbe735f-589d-498d-a5ec-4902f447f8e2" />
+
+ ## Ai Carrier Matcher 
+
+ <img width="1890" height="967" alt="image" src="https://github.com/user-attachments/assets/ffef3f00-14b8-4aa0-be0b-eecd05e82705" />
+ <img width="1901" height="958" alt="image" src="https://github.com/user-attachments/assets/2d3ec606-04df-44d4-bc10-a9059cfcbec7" />
+
+ ## Career Guide Copilot
+
+ <img width="1897" height="963" alt="image" src="https://github.com/user-attachments/assets/48d6c890-d5e2-4a9d-9d48-5482421a4486" />
+ <img width="1889" height="934" alt="image" src="https://github.com/user-attachments/assets/cfec5faa-ac11-4333-8534-0415bcf1e2ce" />
+
+
+
+
+
+
+
+
+
+
+
+
 
 ---
 
